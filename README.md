@@ -1,16 +1,14 @@
-# advance_flutter_ch1
+# ch1
 
-A new Flutter project.
+<h1 align="center"> 1.Change Theme</h1>
 
-## Getting Started
+<h1 align="left"></h1>
 
-This project is a starting point for a Flutter application.
+<div align ="center">
 
-A few resources to get you started if this is your first Flutter project:
+  <img src = "https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/a2ad0bd6-3685-413c-be5d-ddb376282393" height ="550">
+   <img src = "https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/3939d7df-4db3-4e8f-9c71-882aca3c05bc" height ="550">
+  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</div>
