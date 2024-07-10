@@ -12,3 +12,19 @@
 
 
 </div>
+
+<h1 align="center"> 1.Stepper Widget</h1>
+
+<h1 align="left"></h1>
+
+<div align ="center">
+
+  <img src = "https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/d3d076d1-c814-40cf-b28c-d69e61617470" height ="550">
+   <img src = "https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/f44a8322-e72d-4871-ad77-b51198bc9604" height ="550">
+
+
+
+  
+
+
+</div>
