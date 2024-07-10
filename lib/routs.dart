@@ -1,4 +1,5 @@
 import 'package:advance_flutter_ch1/ChangeTheme/changetheme.dart';
+import 'package:advance_flutter_ch1/StepperWidget/stepper.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' : (context) => ChangeTheme(),
+        '/' : (context) => steppervartical(),
       },
     );
   }
