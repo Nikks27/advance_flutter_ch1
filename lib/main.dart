@@ -1,3 +1,4 @@
+import 'package:advance_flutter_ch1/Screens/QuotesData/View/QoutesDataView.dart';
 import 'package:advance_flutter_ch1/Screens/provider/HomePage_Provider.dart';
 import 'package:advance_flutter_ch1/Screens/view/HomePage.dart';
 import 'package:advance_flutter_ch1/routs.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         darkTheme: ThemeData.dark(),
         themeMode: Provider.of<ProviderClass>(context).IsDark?ThemeMode.light:ThemeMode.dark,
         debugShowCheckedModeBanner: false,
-        home: ProviderTheme(),
+        home: Qoutesdataview(),
       ),
     );
   }
