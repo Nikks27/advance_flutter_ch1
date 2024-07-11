@@ -72,4 +72,28 @@ dependencies:
 - ```It is a type of provider that does not do any fancy work.```
 - It just calls the provider in a new widget and delegates its build implementation to the builder.
 
+</div>
+
+<h1 align="center"> 1.Provider & Change Theme using Provider</h1>
+
+<h1 align="left"></h1>
+
+<div align ="center">
+
+  <img src = "https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/6e115fbf-a693-44a4-a1f1-3b3e36646648" height ="550">
+   <img src = "https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/c2026d8a-1779-4a9d-b516-a38f69ea13c7" height ="550">
+
+
+
+
+https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/7c687325-a32c-4a0e-ba05-14a51319fc0c
+
+
+
+
+
+
+
+</div>
+
 
