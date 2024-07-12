@@ -89,6 +89,25 @@ dependencies:
 https://github.com/Nikks27/advance_flutter_ch1/assets/148762716/7c687325-a32c-4a0e-ba05-14a51319fc0c
 
 
+</div>
+
+
+</div>
+
+<h1 align="center"> 1.Quotes Data Solving with Provider</h1>
+
+<h1 align="left"></h1>
+
+<div align ="center">
+
+  <img src = "https://github.com/user-attachments/assets/da0254f9-4a75-45f6-afc5-7587c35617e6" height ="550">
+   <img src = "https://github.com/user-attachments/assets/da271bc4-8a04-4027-9cc6-4767b07dbd30" height ="550">
+
+
+
+https://github.com/user-attachments/assets/c77bfa5f-39e1-4eeb-9f7b-3dfc37097695
+
+
 
 
 
