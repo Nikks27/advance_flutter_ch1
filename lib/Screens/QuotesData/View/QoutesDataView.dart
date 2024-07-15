@@ -26,7 +26,6 @@ class Quotesdataview extends StatelessWidget {
         itemBuilder: (context, index) => Card(
           elevation: 10,
           child: ListTile(
-
             leading: Text(index.toString()),
             title: Text(
               quotetrue.quotes[index]["quote"],style: TextStyle(fontSize: 18,),
