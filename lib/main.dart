@@ -1,5 +1,6 @@
 import 'package:advance_flutter_ch1/LounchUri/Provider/ContactusPageProvider.dart';
 import 'package:advance_flutter_ch1/LounchUri/View/launchHome.dart';
+import 'package:advance_flutter_ch1/Photo%20Gallery/View/homescreen.dart';
 import 'package:advance_flutter_ch1/Time%20intro%20Screen/Screens/Provider/Provider.dart';
 import 'package:advance_flutter_ch1/Time%20intro%20Screen/Screens/View/homescreen.dart';
 import 'package:advance_flutter_ch1/Time%20intro%20Screen/Screens/View/introscreen1.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/' : (context) => ContactScreen(),
+          '/' : (context) => PhotoGallery(),
         },
       ),
     );
