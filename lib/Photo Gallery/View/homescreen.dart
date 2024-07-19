@@ -1,170 +1,104 @@
 
+import 'package:advance_flutter_ch1/Photo%20Gallery/Provider/Provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class Gallery1Screen extends StatelessWidget {
-  const Gallery1Screen({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
 
   @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
-    GalleryProvider galleryProviderFalse = Provider.of(
-      context,
-      listen: false,
-    );
+    OpenHideFolderProvider openHideFolderProvider =
+    Provider.of<OpenHideFolderProvider>(context, listen: false);
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: const Icon(
-          Icons.menu,
-          size: 28,
-          color: Colors.black,
-        ),
-        elevation: 0.5,
-        scrolledUnderElevation: 0.1,
-        backgroundColor: Colors.white,
-        shadowColor: Colors.black,
-        centerTitle: true,
-        title: const Text(
-          'Gallery',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 27,
-            letterSpacing: 0.7,
-            color: Colors.black,
-          ),
+        title: Text(
+          "Gallery",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
         ),
       ),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: SizedBox(
-          width: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 10, top: 15),
-            child: Column(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Row(
-                  children: [
-                    DropdownButton(
-                      items: const [
-                        DropdownMenuItem(
-                          child: Text(
-                            'Albums',
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ],
-                      onChanged: (value) {},
+                PopupMenuButton<SampleItem>(
+                  itemBuilder: (BuildContext context) =>
+                  <PopupMenuEntry<SampleItem>>[
+                    const PopupMenuItem<SampleItem>(
+                      value: SampleItem.itemOne,
+                      child: Text('Select'),
                     ),
-                    const SizedBox(
-                      width: 179,
-                    ),
-                    Icon(
-                      Icons.search_outlined,
-                      size: 28,
-                      color: Colors.grey.shade700,
-                    ),
-                    PopupMenuButton(
-                      itemBuilder: (context) => popUpMenuItems,
-                      iconColor: Colors.black,
-                      onSelected: (value) async {
-                        if (value == 1) {
-                          await galleryProviderFalse.authication();
-                          if (galleryProviderFalse.didAuthenticate) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const HideScreen(),
-                              ),
-                            );
-                          }
-                        }
+                    PopupMenuItem<SampleItem>(
+                      onTap: () {
+                        openHideFolderProvider.Navset(context);
                       },
+                      value: SampleItem.itemTwo,
+                      child: Text('Hide Folder'),
+                    ),
+                    const PopupMenuItem<SampleItem>(
+                      value: SampleItem.itemThree,
+                      child: Text('Move'),
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 12,right: 6),
-                  child: Column(
-                    children: [
-                      Wrap(
-                        spacing: width * 0.032,
-                        children: [
-                          ...List.generate(
-                            galleryImgList.length,
-                                (index) => Padding(
-                              padding: const EdgeInsets.only(bottom: 10),
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: height * 0.1422,
-                                    width: width * 0.283,
-                                    decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.circular(18),
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: AssetImage(
-                                            galleryImgList[index]['img']),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    height: height * 0.07,
-                                    width: width * 0.275,
-                                    child: Column(
-                                      mainAxisAlignment:
-                                      MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          galleryImgList[index]['cat'],
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: width * 0.044),
-                                        ),
-                                        Text(
-                                          galleryImgList[index]['num'],
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: width * 0.034,
-                                              color: Colors.grey.shade600),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
-          ),
+            Wrap(
+              children: [
+                ...List.generate(ListOfImage.length,(index) => Container(
+                  height: 100,
+                  width: 100,
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    color: Colors.blue,
+                    image: DecorationImage(image: AssetImage(ListOfImage[index],),fit: BoxFit.cover),
+        
+                  ),
+                ),),
+              ],
+            )
+          ],
         ),
       ),
     );
   }
 }
 
-List<PopupMenuEntry> popUpMenuItems = [
-  const PopupMenuItem(
-    value: 0,
-    child: Text(
-      'setting',
-    ),
-  ),
-  const PopupMenuItem(
-    value: 1,
-    child: Text(
-      'Show Hidden Folder',
-    ),
-  )
+List ListOfImage = [
+  "assets/images/breackup.jpg",
+  "assets/images/change.jpg",
+  "assets/images/creativitiy.jpg",
+  "assets/images/Discipline.webp",
+  "assets/images/divorce_time.jpg",
+  "assets/images/education.jpg",
+  "assets/images/Enterpreneur.webp",
+  "assets/images/family.jpg",
+  "assets/images/focus.jpg",
+  "assets/images/freedome.jpg",
+  "assets/images/freinds.jpg",
+  "assets/images/goal.jpg",
+  "assets/images/happyness.jpg",
+  "assets/images/health.jpg",
 ];
+List HideImage = [
+  "assets/images/hope.jpg",
+  "assets/images/kind.jpeg",
+  "assets/images/leader.jpg",
+  "assets/images/love.jpg",
+  "assets/images/marriage.webp",
+  "assets/images/money.webp",
+  "assets/images/Positivity.jpeg",
+  "assets/images/respect.jpg",
+  "assets/images/sad.jpg",
+  "assets/images/sports.jpg",
+];
+
+enum SampleItem { itemOne, itemTwo, itemThree }

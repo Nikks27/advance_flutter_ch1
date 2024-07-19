@@ -1,5 +1,6 @@
 import 'package:advance_flutter_ch1/LounchUri/Provider/ContactusPageProvider.dart';
 import 'package:advance_flutter_ch1/LounchUri/View/launchHome.dart';
+import 'package:advance_flutter_ch1/Photo%20Gallery/Provider/Provider.dart';
 import 'package:advance_flutter_ch1/Photo%20Gallery/View/homescreen.dart';
 import 'package:advance_flutter_ch1/Time%20intro%20Screen/Screens/Provider/Provider.dart';
 import 'package:advance_flutter_ch1/Time%20intro%20Screen/Screens/View/homescreen.dart';
@@ -19,12 +20,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create: (context) => ContactPage(),
+    return ChangeNotifierProvider(
+      create: (context) => OpenHideFolderProvider(),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        routes: {
-          '/' : (context) => PhotoGallery(),
-        },
+        home: MyHomePage(),
       ),
     );
   }
