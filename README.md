@@ -155,4 +155,22 @@ https://github.com/user-attachments/assets/0605e59a-1fdb-48a1-bec8-a39144daeb50
 
 </div>
 
+</div>
+
+<h1 align="center"> 1. Photo Gallery With Biometric Authentication</h1>
+
+<h1 align="left"></h1>
+
+<div align ="center">
+
+  <img src = "https://github.com/user-attachments/assets/1294648e-b2aa-407a-b707-723551479ff0" height ="550">
+  <img src = "https://github.com/user-attachments/assets/53dfbe73-6a89-49ca-ae5f-08c65fe31b6c" height ="550">
+
+
+https://github.com/user-attachments/assets/b4e8974f-ca25-41bb-98bd-cfcf0be957f6
+
+
+
+</div>
+
 
